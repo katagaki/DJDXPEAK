@@ -12,8 +12,9 @@
 .com.apple.timemachine.donotpresent
 Icon?
 
-# ---- Model input images ----
+# ---- Model input and output ----
 Inputs/
+Outputs/
 
 # ---- Python / uv ----
 .venv/
@@ -34,23 +35,9 @@ build/
 .cache/
 
 # ---- Generated training artefacts (re-derivable from labels + scripts) ----
-# All training outputs now live under Outputs/ (see Training/scripts/_common.py).
-# YOLO defaults to ./runs when not told otherwise, so ignore stray runs/ too.
 Training/runs/
 runs/
-Outputs/dataset/
-Outputs/digit_dataset/
-Outputs/models/
-Outputs/rank_classifier_data/
-Outputs/clear_type_data/
-Outputs/runs/
 *.pt
-
-# ---- Outputs: keep the exported CoreML model, ignore regenerable bits ----
-Outputs/label_preview/
-Outputs/crops/
-Outputs/predictions.json
-Outputs/*.app/
 *.mlpackage
 
 # ---- Swift / Xcode ----
